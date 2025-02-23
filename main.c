@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
+#include<stdbool.h>
 
 #define textoPadrao "pedra papel e tesoura"
 #define pedra "1 = pedra"
@@ -8,16 +9,21 @@
 #define tesoura "3 = tesoura"
 
 int main(){
-    printf("%s\n\n", textoPadrao);
-    printf("%s\n", pedra);
-    printf("%s\n", papel);
-    printf("%s\n\n", tesoura);
+    for(;;){
+        printf("%s\n\n", textoPadrao);
+        printf("%s\n", pedra);
+        printf("%s\n", papel);
+        printf("%s\n\n", tesoura);
 
     int num1, num2;
 
     printf("escolha um numero entre 1 , 2 e 3: \n");
     printf("seu numero: ");
     scanf("%d", &num1);
+
+    if (num1 == 0){
+        break;
+    }
 
     srand(time(NULL));
 
@@ -40,6 +46,7 @@ int main(){
         printf("empate \n");
     }
 
+}
     system("pause");
     return 0;
 }
