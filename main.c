@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <stdbool.h>
 
+#define linha "----------------------"
 #define textoPadrao "pedra papel e tesoura"
 #define pedra "1 = pedra"
 #define papel "2 = papel"
@@ -11,7 +12,8 @@
 
 int main(){
     for(;;){
-        printf("%s\n\n", textoPadrao);
+        printf("%s\n", linha);
+        printf("%s\n", textoPadrao);
         printf("%s\n", pedra);
         printf("%s\n", papel);
         printf("%s\n", tesoura);
@@ -29,7 +31,10 @@ int main(){
 
     if (num1 > 3){
         printf("opcao invalida\n");
-        printf("----------------------------------\n\n");
+        printf("----------------------------------\n");
+        printf("espere um instante!\n");
+        sleep(2);
+        system("cls");
     } else {
         srand(time(NULL));
 
