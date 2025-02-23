@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1740301229 source:c:\users\user\documents\curso c\projetin 1 (x1 binario)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
