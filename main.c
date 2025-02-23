@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#include<stdbool.h>
+#include <stdbool.h>
 
 #define textoPadrao "pedra papel e tesoura"
 #define pedra "1 = pedra"
@@ -52,8 +52,6 @@ int main(){
             printf("empate \n");
         }
     }
-
-
 
 }
     system("pause");
