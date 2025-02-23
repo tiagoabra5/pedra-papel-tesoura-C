@@ -31,7 +31,7 @@ int main(){
 
     if (num1 > 3){
         printf("opcao invalida\n");
-        printf("----------------------------------\n");
+        printf("%s\n", linha);
         printf("espere um instante!\n");
         sleep(2);
         system("cls");
