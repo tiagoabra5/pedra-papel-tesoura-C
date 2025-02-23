@@ -7,13 +7,15 @@
 #define pedra "1 = pedra"
 #define papel "2 = papel"
 #define tesoura "3 = tesoura"
+#define stop "0 = stop"
 
 int main(){
     for(;;){
         printf("%s\n\n", textoPadrao);
         printf("%s\n", pedra);
         printf("%s\n", papel);
-        printf("%s\n\n", tesoura);
+        printf("%s\n", tesoura);
+        printf("%s\n\n", stop);
 
     int num1, num2;
 
@@ -25,26 +27,33 @@ int main(){
         break;
     }
 
-    srand(time(NULL));
-
-    num2 = rand() % 3 + 1;
-    printf("computador escolheu: %d\n", num2);
-
-    if (num1 == 1 && num2 == 3){
-        printf("vc ganhou \n");
-    } else if (num1 == 3 && num2 == 2){
-        printf("vc ganhou \n");
-    } else if (num1 == 2 && num2 == 1){
-        printf("vc ganhou \n");
-    } else if (num2 == 1 && num1 == 3){
-        printf("vc perdeu \n");
-    } else if (num2 == 3 && num1 == 2){
-        printf("vc perdeu \n");
-    } else if (num2 == 2 && num1 == 1){
-        printf("vc perdeu \n");
+    if (num1 > 3){
+        printf("opcao invalida\n");
+        printf("----------------------------------\n\n");
     } else {
-        printf("empate \n");
+        srand(time(NULL));
+
+        num2 = rand() % 3 + 1;
+        printf("computador escolheu: %d\n", num2);
+
+        if (num1 == 1 && num2 == 3){
+            printf("vc ganhou \n");
+        } else if (num1 == 3 && num2 == 2){
+            printf("vc ganhou \n");
+        } else if (num1 == 2 && num2 == 1){
+            printf("vc ganhou \n");
+        } else if (num2 == 1 && num1 == 3){
+            printf("vc perdeu \n");
+        } else if (num2 == 3 && num1 == 2){
+            printf("vc perdeu \n");
+        } else if (num2 == 2 && num1 == 1){
+            printf("vc perdeu \n");
+        } else {
+            printf("empate \n");
+        }
     }
+
+
 
 }
     system("pause");
